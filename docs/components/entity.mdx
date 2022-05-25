@@ -1,0 +1,44 @@
+---
+sidebar_position: 2
+---
+
+# Entity
+:::caution
+`Entity` and `Entry` are similar but different.
+:::
+
+`Entity` is a category that you see in miniSakai.  
+For example, 
+- Assignment
+- Quiz
+- Memo
+
+are one of the `Entity` we display in miniSakai. `Entity` should have a **`Course`**, a **list of `Entry`**, 
+and a **read flag** property for [Notification Badge](/features/notification-badge.md).
+
+All these requirements are defined as `Interface` under [src/features/entity/type.ts](https://github.com/kyoto-u/comfortable-sakai/blob/master/src/features/entity/type.ts).
+
+```typescript title="EntityProtocol"
+export interface EntityProtocol {
+    course: Course;
+    entries: Array<EntryProtocol>;
+    isRead: boolean;
+
+    getCourse(): Course;
+
+    getEntriesMap(): Map<string, EntryProtocol>;
+}
+```
+
+Every `Entity` needs to inherit `EntityProtocol` and implement properties and methods.  
+
+
+An `Entity` could have multiple `Entry`. For example, an Assignment Entity might look like this:
+
+```typescript
+const assignment = new Assignment(
+    course, // Course Site info
+    [new AssignmentEntry(), new AssignmentEntry(), new AssignmentEntry()],
+    false // Read flags
+);
+```

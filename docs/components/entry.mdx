@@ -1,0 +1,40 @@
+---
+sidebar_position: 3
+---
+
+# Entry
+:::caution
+`Entry` and `Entity` are similar but different.
+:::
+
+`Entry` is a single item in each [Entity](entity.mdx) that is displayed in miniSakai. 
+For example, 
+- AssignmentEntry
+- QuizEntry
+- MemoEntry
+
+are one of the `Entry` items we see in miniSakai. `Entry` should have a **unique ID**, a **title**, 
+a **due date timestamp**, and a **finished flag** property for checkbox.
+
+All these requirements are defined as `Interface` under [src/features/entity/type.ts](https://github.com/kyoto-u/comfortable-sakai/blob/master/src/features/entity/type.ts).
+
+```typescript title="EntryProtocol"
+export interface EntryProtocol {
+    id: string;
+    title: string;
+    dueTime: number;
+    hasFinished: boolean;
+
+    getTimestamp(currentTime: number, showLateAcceptedEntry: boolean): number;
+
+    getDueDate(showLate: boolean): number;
+
+    getCloseDate(): number;
+
+    getID(): string;
+
+    save(hostname: string): Promise<void>;
+}
+```
+
+Every `Entry` needs to inherit `EntryProtocol` and implement properties and methods.

@@ -1,0 +1,15 @@
+---
+sidebar_position: 4
+---
+
+# Course
+`Course` is an object where Course information are stored.   
+`Course` has a **unique ID** which is same as Course ID in Sakai, a **name** also same as Course Name, 
+and a **link** to Course page.
+
+These are defined in [src/features/course/types.ts](https://github.com/kyoto-u/comfortable-sakai/blob/master/src/features/course/types.ts).
+
+For example, a Course object look like this:
+```typescript
+const course = new Course("de99403c-5cd2-4744-b26f", "Sample Lecture", "https://***.***/");
+```
