@@ -1,0 +1,36 @@
+---
+sidebar_position: 2
+---
+
+# Quick Build
+Clone [Comfortable Sakai](https://github.com/kyoto-u/comfortable-sakai) repository from GitHub.
+
+```bash
+git clone git@github.com:kyoto-u/comfortable-sakai.git
+```
+
+Then, change directory to `comfortable-sakai`.
+
+```bash
+cd comfortable-sakai
+```
+
+Install dependencies using `npm`.
+
+```bash
+npm install
+```
+
+:::tip Tip for installation
+If `npm install` is not working, make sure to check if appropriate versions of `npm` and `nodejs` is installed to your device.
+Please refer to [Required Version](development.md#required-version) for more information.
+:::
+
+You can now build Comfortable Sakai with the following commands.
+
+```bash title="For Google Chrome (Chromium Browser)"
+npm run build:chrome
+```
+```bash title="For Firefox"
+npm run build:firefox
+```

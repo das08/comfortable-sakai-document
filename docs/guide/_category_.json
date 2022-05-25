@@ -1,0 +1,8 @@
+{
+  "label": "Guide",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "A Quick Guide fot Developing Comfortable Sakai."
+  }
+}
