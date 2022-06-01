@@ -6,7 +6,8 @@
   "main": "src/index.tsx",
   "dependencies": {
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "@das08/comfortable-sakai-component": "0.0.2"
   },
   "devDependencies": {
     "@rescripts/cli": "^0.0.16",
