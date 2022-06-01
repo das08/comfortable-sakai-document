@@ -12,5 +12,14 @@ Install `nodeJS` and `npm` that satisfies the following version:
 - `npm` 8.0.0+
 
 
+## Required Package
+All required packages are described in [package.json](https://github.com/kyoto-u/comfortable-sakai/blob/master/package.json).
+
+Install dependencies using `npm`.
+
+```bash
+npm install
+```
+
 
 

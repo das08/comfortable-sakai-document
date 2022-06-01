@@ -1,8 +1,37 @@
 ---
-title: Test
-hide_table_of_contents: true
+sidebar_position: 2
 ---
 
-import CodeSandboxExample from './CodeSandboxExample';
+# Structure Overview
 
-<CodeSandboxExample name="sets" />
+## Source Code
+All source codes are located in [`src`](https://github.com/kyoto-u/comfortable-sakai/tree/master/src) directory.  
+When building the extension, file ends with `.ts` and `.tsx` will be transpiled to `.js` and `.jsx` respectively.
+(Except for files in `tests` directory.)
+
+## Assets
+Assets are located in [`public`](https://github.com/kyoto-u/comfortable-sakai/tree/master/public) directory.  
+Anything that relates to the extension assets will go here. Such as an icon, a placeholder image, and CSS for styling.
+
+## Locale (i18n)
+For supporting multiple languages, all user-visible strings are written in [`_locales`](https://github.com/kyoto-u/comfortable-sakai/tree/master/_locales) directory.  
+Please refer to [chrome.i18n API Reference](https://developer.chrome.com/docs/extensions/reference/i18n/)
+for more detailed explanation of localizing messages.  
+
+As of now, following languages are supported in Comfortable Sakai.
+- English (en_US) **Primary**
+- Japanese (ja_JP)
+
+:::info
+We are always welcome for your contribution in translation!
+:::
+
+## Tasks
+Configurations for webpack are located in [`tasks`](https://github.com/kyoto-u/comfortable-sakai/tree/master/tasks) directory.
+Each config files are slightly different for each browser.
+
+As of now, following browsers are supported in Comfortable Sakai.
+- Google Chrome
+- Firefox
+- Microsoft Edge (Same file as Chrome)
+- Safari

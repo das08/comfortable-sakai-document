@@ -5,7 +5,7 @@ export default function CodeSandboxExample({ name }: { name: string }): JSX.Elem
     const { siteConfig } = useDocusaurusContext();
 
     // const path = `${siteConfig.organizationName}/${siteConfig.projectName}/tree/${siteConfig.customFields.branch}/examples/${name}`;
-    const path = "kyoto-u/comfortable-sakai/tree/example/examples/Entity";
+    const path = `kyoto-u/comfortable-sakai/tree/example/examples/${name}`;
     return (
         <>
             <ul>
@@ -13,13 +13,13 @@ export default function CodeSandboxExample({ name }: { name: string }): JSX.Elem
                     <a href={`https://codesandbox.io/s/github/${path}`}>Open in CodeSandbox</a>
                 </li>
                 <li>
-                    <a href={`https://github.com/${path}`}>Show Source</a>
+                    <a href={`https://github.com/${path}`}>View Source on GitHub</a>
                 </li>
             </ul>
             <iframe
                 title="Example Preview"
                 className="embedded-iframe"
-                src={`https://codesandbox.io/embed/github/${path}?autoresize=1&fontsize=14&theme=light`}
+                src={`https://codesandbox.io/embed/github/${path}?autoresize=1&fontsize=14&theme=light&view=split`}
             >
                 Example Preview not available
             </iframe>
