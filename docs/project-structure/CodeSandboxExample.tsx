@@ -5,7 +5,7 @@ export default function CodeSandboxExample({ name }: { name: string }): JSX.Elem
     const { siteConfig } = useDocusaurusContext();
 
     // const path = `${siteConfig.organizationName}/${siteConfig.projectName}/tree/${siteConfig.customFields.branch}/examples/${name}`;
-    const path = "kyoto-u/comfortable-sakai/tree/master/examples/miniSakai";
+    const path = "kyoto-u/comfortable-sakai/tree/example/examples/Entity";
     return (
         <>
             <ul>
