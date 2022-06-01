@@ -1,0 +1,53 @@
+---
+sidebar_position: 5
+---
+
+# Settings
+`Settings` is a tab shown in miniSakai.  
+Users can modify settings such as:
+- Use dark theme or not.
+- Set fetch cache-time for Assignments and Quizzes.
+- Change colors of each due-category.
+- Etc...
+
+Settings are defined as exported class `Settings` under [src/features/setting/types.ts](https://github.com/kyoto-u/comfortable-sakai/blob/master/src/features/setting/types.ts).
+
+```typescript title="Settings"
+export class Settings {
+
+    fetchTime: FetchTime = {
+        assignment: undefined,
+        quiz: undefined
+    };
+    cacheInterval: CacheInterval = {
+        assignment: 120,
+        quiz: 600
+    };
+    miniSakaiOption: DisplayOption = {
+        showCompletedEntry: true,
+        showLateAcceptedEntry: false
+    };
+    color: CSColor = {
+        topDanger: "#f78989",
+        topWarning: "#fdd783",
+        topSuccess: "#8bd48d",
+        topOther: "#adadad",
+        miniDanger: "#e85555",
+        miniWarning: "#d7aa57",
+        miniSuccess: "#62b665",
+        miniOther: "#777777"
+    };
+    
+}
+```
+
+## Example
+Following example code are the same as miniSakai Settings tab.  
+
+:::caution
+This DOM in CodeSandbox is not interactable.
+:::
+
+import CodeSandboxExample from './CodeSandbox';
+
+<CodeSandboxExample name="Settings" />
