@@ -1,0 +1,59 @@
+---
+sidebar_position: 2
+---
+
+# Manifest
+Comfortable Sakai Extension manifests are managed by [`tasks/manifest-webpack-plugin.js`](https://github.com/kyoto-u/comfortable-sakai/blob/master/tasks/manifest-webpack-plugin.js)
+
+
+## Manifest Plugin
+This custom plugin dynamically creates `manifest.json` file, which is required for every Browser Extension.  
+
+The base manifest file is [manifest.json](https://github.com/kyoto-u/comfortable-sakai/blob/master/manifest.json),
+and differences for each browser is in separate file. Such as: [manifest-firefox.json](https://github.com/kyoto-u/comfortable-sakai/blob/master/manifest-firefox.json).  
+
+`manifest.json` files are merged according to browser type when you build the extension.
+
+## Manifest Version
+Currently, manifest versions are as follows:
+- Google Chrome: `v3`
+- Firefox: `v2`
+  - Also requires unique `"applications.gecko.id"`.
+- Microsoft Edge: `v2`
+- Safari: `v2`
+
+```json title="manifest.json"
+{
+  "manifest_version": 3 // For Chrome as of now
+}
+```
+
+```json title="manifest-v2.json"
+{
+  "manifest_version": 2 // For other than Chrome
+}
+```
+
+## Extension Version
+Comfortable Sakai versions are also dynamically created by this plugin.  
+Version info written in [`package.json`](https://github.com/kyoto-u/comfortable-sakai/blob/master/package.json)
+will be copied to `manifest.json`.  
+
+If you are to change the version of the extension, you must put the version information directly in `package.json`.
+
+```json title="package.json"
+{
+  "name": "comfortable-sakai",
+  "version": "*.*.*", // PUT VERSION HERE
+  "description": "Comfortable Sakai is a Web browser extension for managing assignments and quizzes on Sakai LMS.",
+  "main": "index.ts",
+}
+```
+
+## Default Locale
+Default locale is written in [manifest.json](https://github.com/kyoto-u/comfortable-sakai/blob/master/manifest.json).  
+```json title="manifest.json"
+{
+  "default_locale": "en" // Default is en_US
+}
+```
