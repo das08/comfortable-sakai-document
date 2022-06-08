@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcomfortable_sakai_document=self.webpackChunkcomfortable_sakai_document||[]).push([[4930],{6296:function(a){a.exports=JSON.parse('{"label":"hola","permalink":"/comfortable-sakai-document/blog/tags/hola","allTagsPath":"/comfortable-sakai-document/blog/tags","count":1}')}}]);

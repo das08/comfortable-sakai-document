@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcomfortable_sakai_document=self.webpackChunkcomfortable_sakai_document||[]).push([[6574],{8765:function(a){a.exports=JSON.parse('{"label":"docusaurus","permalink":"/comfortable-sakai-document/blog/tags/docusaurus","allTagsPath":"/comfortable-sakai-document/blog/tags","count":4}')}}]);
