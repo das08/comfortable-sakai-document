@@ -25,4 +25,6 @@ On the left side of the assignment information, there is a checkbox. You can use
 
 ![Check Box](img/checkbox.png)
 
-[//]: # (Write Memo)
+## Settings Tab
+
+![Settings Tab](img/settings_tab.png){:height="50px"}
