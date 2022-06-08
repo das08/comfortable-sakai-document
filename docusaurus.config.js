@@ -85,7 +85,7 @@ const config = {
             items: [
               {
                 label: 'Intro',
-                to: '/docs/intro',
+                to: '/docs/category/what-users-can-do',
               },
             ],
           },

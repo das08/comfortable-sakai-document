@@ -13,7 +13,7 @@ Default Cache Time is as follows:
 - Assignments: **120** seconds
 - Quizzes: **600** seconds
 
-You can modify Cache Time from [miniSakai Settings Tab](minisakai.md#settings-tab).
+You can modify Cache Time from [miniSakai Settings Tab](./minisakai#settings-tab).
 
 ![Cache Time](img/cache_time.png)
 
