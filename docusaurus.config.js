@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Comfortable Sakai',
   tagline: 'A Web browser Extension for improving UX of Sakai LMS.',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://das08.github.io/comfortable-sakai-document/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -18,6 +18,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'das08', // Usually your GitHub org/user name.
   projectName: 'comfortable-sakai-document', // Usually your repo name.
+  trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
