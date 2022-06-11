@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcomfortable_sakai_document=self.webpackChunkcomfortable_sakai_document||[]).push([[8550],{8841:function(o){o.exports=JSON.parse('{"permalink":"/comfortable-sakai-document/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
