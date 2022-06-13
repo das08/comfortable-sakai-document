@@ -40,13 +40,6 @@ const config = {
           editUrl:
             'https://github.com/das08/comfortable-sakai-document/tree/master/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/das08/comfortable-sakai-document/tree/master/',
-        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -70,7 +63,6 @@ const config = {
             position: 'left',
             label: 'Document',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/kyoto-u/comfortable-sakai',
             label: 'GitHub',
