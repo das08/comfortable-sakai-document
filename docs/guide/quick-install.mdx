@@ -16,3 +16,21 @@ Download from [Firefox Addons](https://addons.mozilla.org/ja/firefox/addon/comfo
 
 
 ## From Source File
+Build the extension with `npm run build:all` command. Refer to [Quick Build](./quick-build.mdx) for detailed description of build command.  
+
+### Google Chrome
+After building the extension, `dist` directory is created in the root of the project folder.  
+Open [`chrome://extensions/`](chrome://extensions/) in your Google Chrome.  
+Then, click `Load Unpacked` button and select built source codes in `dist/source/chrome`.
+
+:::tip Tips
+If `Load Unpacked` button is not visible, try turning `Developer mode` on.  
+`Developer mode` can be changed in [`chrome://extensions/`](chrome://extensions/) page.
+:::
+
+### Firefox
+After building the extension, `dist` directory is created in the root of the project folder.  
+Open [`about:debugging#/runtime/this-firefox`](about:debugging#/runtime/this-firefox) in your Firefox.  
+Then, click `Load Temporary Add-on` button and select zipped source codes in `dist/release/comfortable-sakai-firefox-v***.zip`.
+
+

@@ -17,7 +17,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/category/what-users-can-do">
-            Comfortable Sakai Tutorial - 5min ⏱️
+            Comfortable Sakai Documentation 👉
           </Link>
         </div>
       </div>
