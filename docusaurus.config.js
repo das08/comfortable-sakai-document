@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Comfortable Sakai',
   tagline: 'A Web browser Extension for improving UX of Sakai LMS.',
-  url: 'https://das08.github.io/comfortable-sakai-document/',
-  baseUrl: '/',
+  url: 'https://das08.github.io',
+  baseUrl: '/comfortable-sakai-document/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
