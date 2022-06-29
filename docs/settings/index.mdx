@@ -1,0 +1,54 @@
+---
+sidebar_position: 1
+---
+
+# Settings
+Comfortable Sakai has many Setting parameters.
+
+- Enable dark mode
+- Show completed entry
+- Show Assignments that can be submitted late
+- Custom cache time
+  - Assignment cache time
+  - Quiz cache time
+- Custom user color
+  - User color for miniSakai
+  - User color for course tabs
+
+
+## Setting Class
+Settings are defined as exported class `Settings` under [src/features/setting/types.ts](https://github.com/kyoto-u/comfortable-sakai/blob/master/src/features/setting/types.ts).
+
+```typescript title="Settings"
+export class Settings {
+    appInfo: AppInfo = {
+        version: VERSION,
+        hostname: window.location.hostname,
+        currentTime: CurrentTime,
+        useDarkTheme: false
+    };
+    fetchTime: FetchTime = {
+        assignment: undefined,
+        quiz: undefined
+    };
+    cacheInterval: CacheInterval = {
+        assignment: 120,
+        quiz: 600
+    };
+    miniSakaiOption: DisplayOption = {
+        showCompletedEntry: true,
+        showLateAcceptedEntry: false
+    };
+    color: CSColor = {
+        topDanger: "#f78989",
+        topWarning: "#fdd783",
+        topSuccess: "#8bd48d",
+        topOther: "#adadad",
+        miniDanger: "#e85555",
+        miniWarning: "#d7aa57",
+        miniSuccess: "#62b665",
+        miniOther: "#777777"
+    };
+}
+```
+
