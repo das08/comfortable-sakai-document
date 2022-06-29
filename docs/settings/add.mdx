@@ -1,0 +1,63 @@
+---
+sidebar_position: 2
+---
+
+# Add Settings
+To add new Settings parameter to Comfortable Sakai,
+1. Add new Settings parameter to `src/features/setting/types.ts`
+```typescript title=src/features/setting/types.ts
+export class Settings {
+    appInfo: AppInfo = {
+        version: VERSION,
+        hostname: window.location.hostname,
+        currentTime: CurrentTime,
+        useDarkTheme: false
+    }
+    
+    // Add new Settings parameter here
+    newParameter: string;
+}
+```
+
+2. Also add new Settings parameter to `src/features/setting/decode.ts` to decode Settings from localStorage.
+```typescript title=src/features/setting/decode.ts
+export const decodeSettings = (data: any): Settings => {
+    const settings = new Settings();
+    if (typeof data === "undefined") return settings;
+    settings.appInfo = data.appInfo;
+    settings.fetchTime = data.fetchTime;
+    settings.cacheInterval = data.cacheInterval;
+    settings.miniSakaiOption = data.miniSakaiOption;
+    settings.color = data.color;
+    
+    // Add new Settings parameter here
+    settings.newParameter: data.newParameter;
+    
+    return settings;
+};
+```
+
+3. If you wish users to be able to change the Settings parameter,
+   add React object to `src/components/settings.tsx`.
+
+Add items under `SettingsTab()`.
+```typescript title=src/features/setting/components/Setting.tsx 
+return (
+        <div className="cs-settings-tab">
+            <TranslatedBooleanItem
+                descriptionTag="settings_enable_dark_theme"
+                value={settings.appInfo.useDarkTheme}
+                onChange={(v) =>
+                    props.onSettingsChange({
+                        type: "boolean",
+                        id: "appInfo.useDarkTheme",
+                        newValue: v
+                    })
+                }
+            />
+
+            // New React DOM object code here
+            
+        </div>
+);
+```
